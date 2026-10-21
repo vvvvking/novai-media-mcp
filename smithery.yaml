@@ -1,0 +1,23 @@
+name: novai-media
+description: >-
+  Generate images and video with Chinese models (Seedream, WAND Vega, Hunyuan, Hailuo,
+  Kling, Seedance) from any MCP client, through one OpenAI-compatible API with no platform markup.
+homepage: https://github.com/vvvvking/novai-media-mcp
+license: MIT
+runtime: python
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      novaiApiKey:
+        type: string
+        description: Your NovAI API key (nvai-...). Get one at https://aiapi-pro.com/register
+        default: ""
+    required: ["novaiApiKey"]
+  commandFunction: |-
+    (config) => ({
+      command: "python3",
+      args: ["server.py"],
+      env: { NOVAI_API_KEY: config.novaiApiKey }
+    })
