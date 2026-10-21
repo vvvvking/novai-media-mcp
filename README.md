@@ -1,3 +1,5 @@
+<!-- mcp-name: io.github.vvvvking/novai-media-mcp -->
+
 # novai-media-mcp
 
 Generate **images and video** with Chinese models (Seedream, WAND Vega, Hunyuan, Hailuo, Kling, Seedance) directly from Claude Desktop, Cline, Cursor or any MCP client — through one OpenAI-compatible API.
